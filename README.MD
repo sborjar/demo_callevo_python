@@ -4,29 +4,20 @@ Developer Tools
 
 ![](https://img.shields.io/badge/Python-3.12-blue) 
 
-Optional 
-
-![](https://img.shields.io/badge/Docker-4.41.2-red) 
-
 c## Installation
-### Option 1. Install without Docker
+### Option 1. Install 
 ```
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-### Option 2. Install without Docker but with python environment
+### Option 2. Install with python environment
 ```
 pyhton -m venv venv 
 ./venv/Script/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-### Option 3. Install with Docker support
-You need to install a vscode extension called: Dev Container
-```
-Ctrl + Shift + p 
-Select a `Dev Containers: Reopen in Container`
-```
+
 # Api Documentation
 `http://616262.ip.hamvoip.org:8082/doc/index.html#/`
 
@@ -73,3 +64,14 @@ Result
 Successful request
 Data: {'action': 'checkhealth', 'id': '', 'message': 'Healthy', 'result': 'OK'}
 ```
+
+# What routes should I follow to be able to dial 
+
+To start to dial you must following some steps:
+1. [Get a token from user and password](/doc/doc_get_token_from_user_pass.md)
+1. [Manage a teams (projets groups)](/doc/teams.md)
+1. [Manage an Users](/doc/users.md)
+1. Numbers
+1. Recordings
+1. Projects
+1. TimesZones
