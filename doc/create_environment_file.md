@@ -1,5 +1,5 @@
 # Create environment file
-[Back to start](../README.md)
+[Back to start](../README.MD)
 
 
 1. Create a file called `.env`

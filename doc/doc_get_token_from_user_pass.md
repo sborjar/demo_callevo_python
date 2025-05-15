@@ -1,5 +1,5 @@
 # Get a Token from user and password
-[Back](../README.md)
+[Back](../README.MD)
 
 If Callevo's administration provides you with a username and password to operate in the system, you will need to obtain the token with the following steps.
 
