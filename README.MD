@@ -10,12 +10,12 @@ Optional
 
 c## Installation
 ### Option 1. Install without Docker
-```c
+```
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 ### Option 2. Install without Docker but with python environment
-```c
+```
 pyhton -m venv venv 
 ./venv/Script/activate
 pip install --upgrade pip
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 ### Option 3. Install with Docker support
 You need to install a vscode extension called: Dev Container
-```c
+```
 Ctrl + Shift + p 
 Select a `Dev Containers: Reopen in Container`
 ```
@@ -42,27 +42,34 @@ For this demo each path can be found in the `./src/` folder and is subdivided in
 
 # Important
 The following files are important for the correct functioning of the demo:
-```c
+```
 .env -> Environment Variables
+```
+.env
+```
+API_PATH=http://616262.ip.hamvoip.org:8082/api/v2/
+APP_USER=<email>
+APP_PASS=<password>
+APP_TOKEN=
 ```
 # Execute Demo
 
 1. You must to select a route and group: Ex: General/GET/appversion
 2. To execute
-```c
+```
 python ./src/general/get-appversion.py
 ```
 3. Get the response
-```c
+```
 Successful request
 Response: {'action': 'appversion', 'data': {'appversion': 'v1.250'}, 'id': '', 'message': '', 'result': 'OK'}
 ```
 # Check if the api is healthy
-```c
+```
 python ./src/general/get-health.py 
 ```
 Result
-```c
+```
 Successful request
 Data: {'action': 'checkhealth', 'id': '', 'message': 'Healthy', 'result': 'OK'}
 ```
