@@ -21,7 +21,7 @@ pip install -r requirements.txt
 # Api Documentation
 ### How to use this guide
 
-First you must open the Api documentation. `http://616262.ip.hamvoip.org:8082/doc/index.html#/`
+First you must open the Api documentation. [`http://616262.ip.hamvoip.org:8082/doc/index.html#/`](http://616262.ip.hamvoip.org:8082/doc/index.html#/)
 
 In the documentation it indicates how the path is defined and the requirements it has.
 
