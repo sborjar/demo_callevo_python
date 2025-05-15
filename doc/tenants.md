@@ -1,0 +1,30 @@
+# Tenants
+
+[Back](../README.MD)
+
+
+| Description | Route | Command
+|-------------|-------|---------|
+|Get a all |`GET/tenants`|`python src/tenants/get-tenants.py`|
+|Get a one |`GET/tenants/2012`|`python src/tenants/get-tenants-id.py`| 
+|Create a new |`POST/tenant`|`python src/tenants/post-tenant.py`|  
+|Update|`PUT/tenant/2012`|`python src/tenants/put-tenant.py`|
+|Delete | `DELETE/tenant/2012` | `python src/tenants/delete-tenant.py` |
+
+### Required data
+```json
+{
+    "activate_tenant": "string",
+    "address": "string",
+    "email" : "string",
+    "camp_type": "string",
+    "defaultcalleridgroup": "number",
+    "inbound_number": "string",
+    "name": "string",
+    "selectcmp": "number",
+    "leadtype": "string",
+    "timeid": "number",
+    "timeused": "number",
+    "usedispopt": "number"
+}
+```

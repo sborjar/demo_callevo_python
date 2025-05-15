@@ -68,7 +68,8 @@ Data: {'action': 'checkhealth', 'id': '', 'message': 'Healthy', 'result': 'OK'}
 # What routes should I follow to be able to dial 
 
 To start to dial you must following some steps:
-1. [Get a token from user and password](/doc/doc_get_token_from_user_pass.md)
+1. Callevo Administration gives you a token, you must paste in a .env file
+1. [Manage Projects (Campaigns)](/doc/campaigns.md)
 1. [Manage Teams (projets groups)](/doc/teams.md)
 1. [Manage Users](/doc/users.md)
 1. Numbers
@@ -83,7 +84,7 @@ To start to dial you must following some steps:
 
 | Description | Route | Command
 |-------------|-------|---------|
-|Get a list of my tenant's users|`GET/users`|`python src/users/get-users-id.py`|
+|Get a list of my tenant's users|`GET/users`|`python src/users/get-users.py`|
 |Get a specific user|`GET/users/2012`|`python src/users/get-users-id.py`| 
 |Create a new user|`POST/user`|`python src/users/post-user.py`|  
 |Update a user|`PUT/user/2012`|`python src/users/put-user.py`|

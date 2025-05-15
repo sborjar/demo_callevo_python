@@ -6,27 +6,26 @@ from utils.functions import saveMdFiles
 from dotenv import load_dotenv
 load_dotenv()
 
+url = f'{os.getenv("API_PATH")}campaign'
+
 headers = {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, DELETE',
-    'Access-Control-Allow-Headers': 'Accept,Accept-Language,Content-Language,Content-Type',
-    'Access-Control-Expose-Headers': 'Content-Length,Content-Range',
+    'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
-
-url = f'{os.getenv("API_PATH")}authuser'
-
 params = {
-    "email": os.getenv("APP_USER"),
-    "password": os.getenv("APP_PASS"),
-    "userid": 2001
+    "camp_id": -1,
+    "camp_name": "testsbmesdemayo",
+    "camp_description": "Campaña de prueba",
+    "camp_type": "CL",
+    "dropcb": "y",
+    "timezones": "n",
 }
 response = requests.post(url, json=params, headers=headers)
 
 if response.status_code == 200:
     print('Successful request')
     print('Data:', response.json())
-    saveMdFiles("post-authuser","POST",url,headers,params,response.json())
+    saveMdFiles("post-campaigns","POST",url,headers,params,response.json())
 else:
     print('Error in the request, details:', response.text)
     print('Details:')

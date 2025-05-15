@@ -19,7 +19,7 @@ headers = {
 params = {
     "email": os.getenv("APP_USER"),
     "password": os.getenv("APP_PASS"),
-    "usertype": ["27"]
+    # "usertype": ["27"]
 }
 
 # User type can be Agent - 27 / Clicker - 30 or release if is admin
