@@ -75,3 +75,7 @@ To start to dial you must following some steps:
 1. Recordings
 1. Projects
 1. TimesZones
+1. Pools (Import)
+
+Others
+1. Manage Tenants
