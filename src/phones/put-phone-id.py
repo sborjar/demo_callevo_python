@@ -6,24 +6,23 @@ from utils.functions import saveMdFiles
 from dotenv import load_dotenv
 load_dotenv()
 
-url = f'{os.getenv("API_PATH")}campaign/1796'
+url = f'{os.getenv("API_PATH")}phone/17992'
 
 headers = {
     'Content-Type': 'application/json',
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
-# params = {
-#     "camp_name": "TestSBMesDeMayo",
-# }
 params = {
-    "queue_name": "q25u56emzwqnqkslstk8",
+  "active": 1,
+  "description": "Desde python Test modificado",
+  "phone": "593995918919"
 }
 response = requests.put(url, json=params, headers=headers)
 
 if response.status_code == 200:
     print('Successful request')
     print('Data:', response.json())
-    saveMdFiles("put-campaigns-id","PUT",url,headers,params,response.json())
+    saveMdFiles("put-phones","PUT",url,headers,params,response.json())
 else:
     print('Error in the request, details:', response.text)
     print('Details:')

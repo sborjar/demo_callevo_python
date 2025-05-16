@@ -69,14 +69,15 @@ Data: {'action': 'checkhealth', 'id': '', 'message': 'Healthy', 'result': 'OK'}
 
 To start to dial you must following some steps:
 1. Callevo Administration gives you a token, you must paste in a .env file
-1. [Manage Projects (Campaigns)](/doc/campaigns.md)
-1. [Manage Teams (projets groups)](/doc/teams.md)
 1. [Manage Users](/doc/users.md)
-1. Numbers
+1. [Manage Agents](/doc/agents.md)
+1. [Manage Teams (projets groups)](/doc/teams.md)
+1. [Numbers / Phones](/doc/phones.md)
+1. [Caller ID Groups](/doc/calleridgroups.md)
+1. [Manage Campaigns (Projects)](/doc/campaigns.md)
+1. [Import files (Pools)](/doc/pools.md)
 1. Recordings
-1. Projects
 1. TimesZones
-1. Pools (Import)
 
 # More examples
 
