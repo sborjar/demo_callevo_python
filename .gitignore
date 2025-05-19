@@ -3,3 +3,5 @@ __pycache__/
 results/
 testing.txt
 log.txt
+*.csv
+*.txt
