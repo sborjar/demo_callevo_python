@@ -1,5 +1,7 @@
 .env
 __pycache__/
 results/
-*.txt
-*.csv
+testing.txt
+log.txt
+files/*.csv
+files/*.txt
