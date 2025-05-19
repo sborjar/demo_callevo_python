@@ -36,8 +36,6 @@ For this demo each path can be found in the `./src/` folder and is subdivided in
 ```
 ```
 API_PATH=http://616262.ip.hamvoip.org:8082/api/v2/
-APP_USER=<email>
-APP_PASS=<password>
 APP_TOKEN=<token>
 ```
 2. Each file has a working code example that works without problems. 
@@ -75,9 +73,10 @@ To start to dial you must following some steps:
 1. [Numbers / Phones](/doc/phones.md)
 1. [Caller ID Groups](/doc/calleridgroups.md)
 1. [Manage Campaigns (Projects)](/doc/campaigns.md)
+1. [File Templates](/doc/pools.md)
 1. [Import files (Pools)](/doc/pools.md)
-1. Recordings
 1. TimesZones
+1. Recordings
 
 # More examples
 
