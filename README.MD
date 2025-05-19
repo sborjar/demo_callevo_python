@@ -73,10 +73,14 @@ To start to dial you must following some steps:
 1. [Numbers / Phones](/doc/phones.md)
 1. [Caller ID Groups](/doc/calleridgroups.md)
 1. [Manage Campaigns (Projects)](/doc/campaigns.md)
-1. [File Templates](/doc/pools.md)
+1. [File Templates](/doc/filetemplates.md)
 1. [Import files (Pools)](/doc/pools.md)
+
+# Other Routes
+
 1. TimesZones
 1. Recordings
+1. Tenants
 
 # More examples
 
