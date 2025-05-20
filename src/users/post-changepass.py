@@ -12,9 +12,9 @@ headers = {
     'Content-Type': 'application/json',
 }
 params = {
-    "email": "santiago@callevo.com",
+    "email": "santiago@rokas.com",
     "newPassword": "Ce21@cAll",
-    "oldPassword": "*xUapByNz-"
+    "oldPassword": "*ikiTNGAu-"
 }
 
 response = requests.post(url, json=params, headers=headers)
