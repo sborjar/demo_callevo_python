@@ -6,31 +6,24 @@ from utils.functions import saveMdFiles
 from dotenv import load_dotenv
 load_dotenv()
 
-url = f'{os.getenv("API_PATH")}user'
+url = f'{os.getenv("API_PATH")}user/15308'
 
 headers = {
     'Content-Type': 'application/json',
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params = {
-    "fullname": "Santiago Rojas",
-    "email": "santiago@rokas.com",
+    "fullname": "Santiago Rokas",
     "usertype": 27,
-    "language": "en",
+    "email": "santiago@rokas.com"
 }
-    # "queue_member_table": [],
-    # "queue_member_table_old": [],
-    # "urllogin": "",
-    # "urllogout": "",
-    # "urlbtwcalls": "",
-    # "phone_number": "593995918919"
 
-response = requests.post(url, json=params, headers=headers)
+response = requests.put(url, json=params, headers=headers)
 
 if response.status_code == 200:
     print('Successful request')
     print('Data:', response.json())
-    saveMdFiles("post-user", "POST", url, headers, params, response.json())
+    saveMdFiles("put-user-id", "PUT", url, headers, params, response.json())
 else:
     print('Error in the request, details:', response.text)
     print('Details:')

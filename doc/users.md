@@ -14,5 +14,28 @@
 
 ### Required data
 ```json
-
+{
+    "userid": "number | new 0",
+    "username": "string",
+    "fullname": "string",
+    "email": "emailcom",
+    "usertype": "number",
+    "tenantid": "number",
+    "language": "string | en",
+}
 ```
+
+### Usertype
+```json
+[
+    { "usertype": "1",  "name": "System Administrator"},
+    { "usertype": "13",  "name": "Supervisor"},
+    { "usertype": "27",  "name": "Agent"},
+    { "usertype": "30",  "name": "Clicker"},
+    { "usertype": "34",  "name": "Political Admin"},
+    { "usertype": "35",  "name": "Political Supervisor"},
+    { "usertype": "40",  "name": "Data Retriever"},
+    { "usertype": "42",  "name": "View Only Supervisor"},
+]
+```
+
