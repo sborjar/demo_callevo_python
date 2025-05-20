@@ -1,5 +1,7 @@
 import os
 
+from requests_toolbelt import MultipartEncoder
+
 def saveMdFiles(file='', method='', url='', headers={}, params={}, response={}):
     folder = "./results"
     folder_exists = os.path.exists(folder)

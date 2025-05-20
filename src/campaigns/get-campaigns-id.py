@@ -6,7 +6,7 @@ from utils.functions import saveMdFiles
 from dotenv import load_dotenv
 load_dotenv()
 
-url = f'{os.getenv("API_PATH")}campaigns/1797'
+url = f'{os.getenv("API_PATH")}campaigns/25'
 
 headers = {
     'Content-Type': 'application/json',

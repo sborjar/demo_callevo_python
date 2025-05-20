@@ -64,7 +64,7 @@ Data: {'action': 'checkhealth', 'id': '', 'message': 'Healthy', 'result': 'OK'}
 ```
 
 # What routes should I follow to be able to dial 
-
+<a id="menu"></a>
 To start to dial you must following some steps:
 1. Callevo Administration gives you a token, you must paste in a .env file
 1. [Manage Users](/doc/users.md)
@@ -78,9 +78,9 @@ To start to dial you must following some steps:
 
 # Other Routes
 
+1. [Recordings](/doc/recordings.md)
+1. [Tenants](/doc/tenants.md)
 1. TimesZones
-1. Recordings
-1. Tenants
 
 # More examples
 

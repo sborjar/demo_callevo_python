@@ -1,0 +1,65 @@
+USERS
+[√] GET/users
+[√] GET/users/id
+[-] POST/user/id
+[-] PUT/user
+[-] DELETE/user/id
+[√] POST/authlogin
+[√] POST/authuser
+
+TEAMS 
+[√] GET/teams
+[X] GET/teams/id    --> trae a todos
+[√] POST/team/id
+[√] PUT/team
+[√] DELETE/team/id  --> hard
+
+CAMPAIGNS
+[√] GET/campaigns
+[√] GET/campaigns/id        -- sale vacio, por la pagina sale vacio igual
+[√] POST/campaign/id
+[√] PUT/campaign             -- exige camp_name !!!
+[√] DELETE/campaign/id       --> soft
+
+NUMBERS / PHONES
+[√] GET/phones
+[√] GET/phones/id
+[√] POST/phone/id
+[√] PUT/phone
+[√] DELETE/phone/id         --> hard
+
+CALLER_ID_GROUPS
+[√] GET/caller_id_groups
+[√] GET/caller_id_groups/id
+[√] POST/caller_id_group                -- en la documentacion esta campid y exige que sea camp_id
+[√] PUT/caller_id_group/id              
+[√] DELETE/caller_id_group/id           -- hard
+
+POOLS
+[√] GET/pools
+[√] GET/pools/id
+[X] POST/pool 
+[X] PUT/pool/id              
+[X] DELETE/pool/id
+
+TEMPLATES
+[√] GET/file_templates              -- list all tamplates
+[√] GET/file_templates              -- headers
+[√] GET/file_templates/id
+[√] POST/file_template              -- from json
+[√] POST/make_template              
+[√] POST/duplicate_template/id
+[√] PUT/file_template/id
+[√] DELETE/file_template/id         --hard
+
+TENANTS
+[√] GET/tenants
+[X] GET/tenants/id                  -- trae todos
+[√] PUT/tenant/id                   
+
+RECORDINGS
+[√] GET/recordings
+[/] GET/recordings/id               -- funciona pero trae un recording que no es del tenant 25 no tiene recid = 8 y lo trae
+[√] POST/recording 
+[√] PUT/recording/id              
+[√] DELETE/recording/id

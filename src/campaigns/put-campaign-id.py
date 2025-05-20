@@ -16,6 +16,7 @@ headers = {
 #     "camp_name": "TestSBMesDeMayo",
 # }
 params = {
+    "camp_name": "Campaña de prueba",
     "queue_name": "q25u56emzwqnqkslstk8",
 }
 response = requests.put(url, json=params, headers=headers)

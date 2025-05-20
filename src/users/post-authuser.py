@@ -19,7 +19,7 @@ url = f'{os.getenv("API_PATH")}authuser'
 params = {
     "email": os.getenv("APP_USER"),
     "password": os.getenv("APP_PASS"),
-    "userid": 2001
+    "userid": 2
 }
 response = requests.post(url, json=params, headers=headers)
 

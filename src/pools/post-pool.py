@@ -35,7 +35,7 @@ if os.path.exists(file_path):
     # print(file_content)
     params = {
         "poolname": "Example Uno",
-        "file_content": (file_name, open(file_path, 'rb'), 'text/plain'),
+        "file_content": (file_name, open(file_path, 'rb'), 'audio/wave'),
         "camp_id": "2",
         "allow_duplicate": "n",
         "randomize": "y",

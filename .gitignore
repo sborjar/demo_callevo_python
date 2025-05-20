@@ -1,5 +1,7 @@
 .env
 __pycache__/
 results/
-*.csv
-*.txt
+files/
+.csv
+.txt
+.wav
