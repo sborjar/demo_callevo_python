@@ -1,7 +1,12 @@
 .env
+*.pyc
+*.csv
+*.txt
+*.wav
+
+testing.txt
+log.txt
+
 __pycache__/
 results/
 files/
-.csv
-.txt
-.wav
