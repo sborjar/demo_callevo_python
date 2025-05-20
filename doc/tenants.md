@@ -7,9 +7,7 @@
 |-------------|-------|---------|
 |Get a all |`GET/tenants`|`python src/tenants/get-tenants.py`|
 |Get a one |`GET/tenants/2012`|`python src/tenants/get-tenants-id.py`| 
-|Create a new |`POST/tenant`|`python src/tenants/post-tenant.py`|  
 |Update|`PUT/tenant/2012`|`python src/tenants/put-tenant.py`|
-|Delete | `DELETE/tenant/2012` | `python src/tenants/delete-tenant.py` |
 
 ### Required data
 ```json
