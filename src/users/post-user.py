@@ -18,12 +18,6 @@ params = {
     "usertype": 27,
     "language": "en",
 }
-    # "queue_member_table": [],
-    # "queue_member_table_old": [],
-    # "urllogin": "",
-    # "urllogout": "",
-    # "urlbtwcalls": "",
-    # "phone_number": "593995918919"
 
 response = requests.post(url, json=params, headers=headers)
 

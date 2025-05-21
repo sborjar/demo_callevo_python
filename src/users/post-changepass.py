@@ -11,10 +11,11 @@ url = f'{os.getenv("API_PATH")}changepass'
 headers = {
     'Content-Type': 'application/json',
 }
+
 params = {
-    "email": "santiago@rokas.com",
-    "newPassword": "Ce21@cAll",
-    "oldPassword": "*ikiTNGAu-"
+    "email": os.getenv("APP_USER"),
+    "oldpassword": os.getenv("APP_PASS"),
+    "newPassword": "***********"
 }
 
 response = requests.post(url, json=params, headers=headers)
