@@ -2,7 +2,8 @@ import requests
 import sys
 import os
 sys.path.insert(0, f'/workspaces/democallevo/')
-from utils.functions import saveMdFiles
+from utils.functions import saveMdFiles,getFileNameMethod
+current_file_name, current_file_method = getFileNameMethod(__file__)
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -13,8 +14,8 @@ headers = {
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params = {
-    "fullname": "Santiago Rojas",
-    "email": "santiago@rokas.com",
+    "fullname": "Carlos Santillan Test",
+    "email": "carlos_santillan@rokas.com",
     "usertype": 27,
     "language": "en",
 }
@@ -24,7 +25,7 @@ response = requests.post(url, json=params, headers=headers)
 if response.status_code == 200:
     print('Successful request')
     print('Data:', response.json())
-    saveMdFiles("post-user", "POST", url, headers, params, response.json())
+    saveMdFiles(current_file_name,current_file_method,url,headers,params,response.json())
 else:
     print('Error in the request, details:', response.text)
     print('Details:')

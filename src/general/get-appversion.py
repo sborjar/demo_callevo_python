@@ -1,5 +1,7 @@
 import requests
 from dotenv import load_dotenv
+from utils.functions import saveMdFiles,getFileNameMethod
+current_file_name, current_file_method = getFileNameMethod(__file__)
 import os
 
 load_dotenv()
@@ -18,6 +20,7 @@ response = requests.get(url)
 if response.status_code == 200:
     print('Successful request')
     print('Response:', response.json())
+    saveMdFiles(current_file_name,current_file_method,url,headers,None,response.json())
 else:
     print('Error in the request, details:', response.text)
     print('Details', response)

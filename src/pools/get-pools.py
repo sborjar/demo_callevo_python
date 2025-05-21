@@ -7,13 +7,14 @@ current_file_name, current_file_method = getFileNameMethod(__file__)
 from dotenv import load_dotenv
 load_dotenv()
 
-url = f'{os.getenv("API_PATH")}users'
+url = f'{os.getenv("API_PATH")}pools'
 
 headers = {
     'Content-Type': 'application/json',
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
-params = None
+params =  None
+
 response = requests.get(url, json=params, headers=headers)
 
 if response.status_code == 200:

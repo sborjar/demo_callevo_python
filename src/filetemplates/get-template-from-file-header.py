@@ -4,7 +4,8 @@ import requests
 import sys
 import os
 sys.path.insert(0, f'/workspaces/democallevo/')
-from utils.functions import saveMdFiles
+from utils.functions import saveMdFiles,getFileNameMethod
+current_file_name, current_file_method = getFileNameMethod(__file__)
 from dotenv import load_dotenv
 from pathlib import Path
 load_dotenv()
@@ -34,7 +35,7 @@ def getTemplate(file_header):
     if response.status_code == 200:
         print('Successful request')
         print('Data:', response.json())
-        saveMdFiles("get-templates-from-file-header","GET",url,headers,params,response.json())
+        saveMdFiles(current_file_name,current_file_method,url,headers,params,response.json())
         
         # Get an id as templateid for pools when importing a new file POST/pool
         data = response.json().get("data")

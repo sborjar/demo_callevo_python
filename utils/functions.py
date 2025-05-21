@@ -2,6 +2,11 @@ import os
 
 from requests_toolbelt import MultipartEncoder
 
+def getFileNameMethod(file=""):
+    only_name = file.split(".")[0]
+    method_file_name = only_name.split("-")[0].upper()
+    return {"current_file_name":only_name, "current_file_method":method_file_name}
+
 def saveMdFiles(file='', method='', url='', headers={}, params={}, response={}):
     folder = "./results"
     folder_exists = os.path.exists(folder)
@@ -13,8 +18,6 @@ def saveMdFiles(file='', method='', url='', headers={}, params={}, response={}):
     
     if os.path.exists(name_file):
         os.remove(name_file)
-    
-    print(f"\nCreating a file {name_file} \n")
     
     color = ""
     if method == "GET":
