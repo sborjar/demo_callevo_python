@@ -16,12 +16,23 @@ def saveMdFiles(file='', method='', url='', headers={}, params={}, response={}):
     
     print(f"\nCreating a file {name_file} \n")
     
+    color = ""
+    if method == "GET":
+        color="21577d"
+    elif method == "POST":
+        color="1c8056"
+    elif method == "PUT":
+        color="ed8d14"
+    elif method == "DELETE":
+        color="ad2525"
+    
     try:
         file = open(name_file, "a")
         
-        file.write(f'``` \n')
-        file.write(f'{method} | {url} \n')
-        file.write(f'``` \n')
+        file.write(f'\n')
+        file.write(f'![](https://img.shields.io/badge/{method}-{color}) ')
+        file.write(f'![](https://img.shields.io/badge/{url}-d7d7d7)')
+        file.write(f'\n')
         
         file.write(f'### Headers \n')
         file.write(f'```js \n')
