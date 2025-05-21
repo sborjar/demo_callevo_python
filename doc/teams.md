@@ -12,13 +12,13 @@
 ### Required data
 ```json
 {
-    "queueid": "number | -1",
+    "queueid": "number",
     "name": "string",
     "team_name": "string",
     "musiconhold": "string",
     "queue_member_table": [
         {
-            "memberid": "number | new -1",
+            "memberid": "number",
             "queueid": "number",
             "agentid": "number",
             "queue_name": "string",
@@ -28,3 +28,4 @@
     ]
 }
 ```
+When the operation is new, the `queueid` can be 0 or deleted.

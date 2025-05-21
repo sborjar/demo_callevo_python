@@ -14,9 +14,9 @@ headers = {
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params = {
+  "phone": "593995918922",
   "active": 1,
-  "description": "Desde python Test4",
-  "phone": "593995918922"
+  "description": "Phone 1 Demo",
 }
 response = requests.post(url, json=params, headers=headers)
 

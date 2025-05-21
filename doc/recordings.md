@@ -19,3 +19,4 @@
     "filecontent": "file",
 }
 ```
+When the operation is new, the `recID` can be 0 or deleted.

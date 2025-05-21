@@ -14,15 +14,17 @@
 ### Required data
 ```json
 {
-    "camp_id": "number | new -1",
+    "camp_id": "number",
     "camp_name": "string",
     "camp_description": "string",
-    "camp_type": "string | CL-MA-IN",
-    "dropcb": "string y|n",
-    "timezones": "string y|n",
+    "camp_type": "string",
+    "dropcb": "string", 
+    "timezones": "string",
 }
 ```
-### CampType
+When the operation is new, the `camp_id` can be 0 or deleted.<br>
+The values for the `dropcb` and `timezones` fields are `y` or `n`.
+### Campaign Type (`camp_type`)
 ```js
 CL - Click to Dial
 MA - Manual
@@ -35,7 +37,7 @@ P3 - Preview
 ### More options
 ```json
 {
-    "camp_id": "number | new -1",
+    "camp_id": "number",
     "camp_name": "string",
     "camp_description": "string",
     "camp_type": "string",
@@ -47,7 +49,7 @@ P3 - Preview
     "customfield": "string",
     "customlabel": "string",
     "campaign_schedule": {
-        "friday_active": "number 1|0",
+        "friday_active": "number",
         "friday_start": "hh:mm:ss",
         "friday_stop": "hh:mm:ss",
         "monday_active": "number",
@@ -95,7 +97,7 @@ P3 - Preview
         "success": "string"
         }
     ],
-    "dropcb": "string y|n",
+    "dropcb": "string",
     "forcedisposition": "string",
     "inbound_number": "string",
     "linesdialed": "number",

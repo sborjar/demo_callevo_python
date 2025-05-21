@@ -14,8 +14,13 @@ Numbers or phones numbers.
 ### Required data
 ```json
 {
-  "active": "number 1|0",
+  "active": "number",
   "description": "string",
   "phone": "string"
 }
+```
+### Active
+```json
+0 - Inactive
+1 - Active
 ```

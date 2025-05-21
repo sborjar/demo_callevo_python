@@ -16,19 +16,14 @@ headers = {
 params =  {
     "queueid": -1,
     "record": { 
-        "name": "Tranzas",
-        "team_name": "Tranzas",
+        "name": "TeamDemo",
+        "team_name": "TeamDemo",
      },
     "queue_member_table": [
         {
             "agentid": 34,    
-            "queue_name": "Tranzas",
-            "interface": "Agent/u257937e6609facda319",
-        },
-        {
-            "agentid": 38,    
-            "queue_name": "Tranzas",
-            "interface": "Agent/u25a3f219d835221a0bf",
+            "queue_name": "TeamDemo",
+            "interface": "Agent/u282dxqb8two6vmoqhdw",
         },
     ]
 }

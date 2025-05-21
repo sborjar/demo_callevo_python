@@ -14,13 +14,14 @@ Numbers or caller id groups numbers.
 ### Required data
 ```json
 {
-    "groupid": "number | new -1",
+    "groupid": "number",
     "group_name": "string",
     "camp_id": "number",
     "phone": [
         {
-        "phoneid": "number"
+            "phoneid": "number"
         }
     ]
 }
 ```
+When the operation is new, the `groupid` can be 0 or deleted.

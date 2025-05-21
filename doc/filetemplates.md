@@ -30,5 +30,5 @@ Numbers or caller id groups numbers.
     ]
 }
 ```
-
+When the operation is new, the `id` can be 0 or deleted.
 

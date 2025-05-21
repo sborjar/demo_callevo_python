@@ -15,11 +15,11 @@ headers = {
 }
 params = {
   "groupid": -1,
-  "group_name": "Otro Group Test",
+  "group_name": "Demo Group",
   "camp_id": 0,
   "phone": [
-    { "phoneid": 17992 },
-    { "phoneid": 17993 },
+    { "phoneid": 18000 },
+    { "phoneid": 18001 },
   ]
 }
 response = requests.post(url, json=params, headers=headers)

@@ -15,11 +15,17 @@ headers = {
 }
 params = {
     "camp_id": -1,
-    "camp_name": "testsbmesdemayo",
-    "camp_description": "Campaña de prueba",
+    "camp_name": "democamp",
+    "camp_description": "Demo Campaign",
     "camp_type": "CL",
     "dropcb": "y",
     "timezones": "n",
+    "groupid": 315,
+    "didrotation": 2,
+    "queue_name": "q282fpqahtqkyc8egq90",
+    "recordings": 1,
+    "initialrecordID": 36,
+    "finalrecordID": 36,
 }
 response = requests.post(url, json=params, headers=headers)
 

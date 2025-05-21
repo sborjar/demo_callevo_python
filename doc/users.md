@@ -21,10 +21,10 @@
     "email": "emailcom",
     "usertype": "number",
     "tenantid": "number",
-    "language": "string | en",
+    "language": "string",
 }
 ```
-
+When the operation is new, the `userid` can be 0 or deleted.
 ### Usertype
 ```json
 [
@@ -37,5 +37,9 @@
     { "usertype": "40",  "name": "Data Retriever"},
     { "usertype": "42",  "name": "View Only Supervisor"},
 ]
+```
+### Supported languages
+```json
+[en]
 ```
 
