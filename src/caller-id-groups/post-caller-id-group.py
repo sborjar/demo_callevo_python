@@ -14,12 +14,10 @@ headers = {
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params = {
-  "groupid": -1,
   "group_name": "Demo Group",
   "camp_id": 0,
   "phone": [
-    { "phoneid": 18000 },
-    { "phoneid": 18001 },
+    { "phoneid": 18003 },
   ]
 }
 response = requests.post(url, json=params, headers=headers)

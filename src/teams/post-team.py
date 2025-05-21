@@ -14,17 +14,27 @@ headers = {
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params =  {
-    "queueid": -1,
     "record": { 
-        "name": "TeamDemo",
-        "team_name": "TeamDemo",
+        "name": "TeamDemo2",
+        "team_name": "TeamDemo2",
      },
     "queue_member_table": [
         {
-            "agentid": 34,    
-            "queue_name": "TeamDemo",
-            "interface": "Agent/u282dxqb8two6vmoqhdw",
+            "agentid": 15337,    
+            "queue_name": "TeamDemo2",
+            "interface": "Agent/u282xdaw7ahwzfz5gsht",
         },
+        {
+            "agentid": 15338,    
+            "queue_name": "TeamDemo2",
+            "interface": "Agent/u282ms5xpeg5m696zckb",
+        },
+        {
+            "agentid": 15339,    
+            "queue_name": "TeamDemo2",
+            "interface": "Agent/u2822htb7mp0d8rnehrd",
+        },
+       
     ]
 }
 

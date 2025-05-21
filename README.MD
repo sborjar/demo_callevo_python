@@ -70,9 +70,9 @@ To start to dial you must following some steps:
 |---|---|---|---|
 |1|Callevo Administration gives you a token which you must paste into an environment variable file in the .env file. | [+Info](/doc/create_environment_file.md) ||
 |2|Create a users (agents/clickers) and obtain the `userid` <br>Ex: {..."message": 12} from response|[+Info](/doc/users.md)<br>[Edit](/src/users/post-user.py)|python src/users/post-user.py|
-|3|Performs a query of the created user, getting the `agent_code` field|[Edit](src/users/get-users-id.py)|python src/users/get-users-id.py|
+|3|Collect user data by getting the `agent_code` and `agentid` field|[Edit](src/users/get-users-id.py)|python src/users/get-users-id.py|
 |4|Create a team and paste the `agent_code` into the interface field => "Agent/<agent_code>"|[+Info](/doc/teams.md)<br>[Edit](/src/teams/post-team.py)|python src/teams/post-team.py|
-|5|Performs a query of the created team via queue_id to get the `name` field, <br> Ex: `{..name: "q282fpqah33qky3s8egq90"}`|[Edit](/src/teams/get-teams-id.py)|python src/teams/get-teams-id.py|
+|5|Collect team data by queue_id to get the `name` field, <br> Ex: `{..name: "q282fpqah33qky3s8egq90"}`|[Edit](/src/teams/get-teams-id.py)|python src/teams/get-teams-id.py|
 |6|Create a phone and obtain the `phoneid` from response {message: '1852'}|[+Info](/doc/phones.md)<br>[Edit](/src/phones/post-phone.py)|python src/phones/post-phone.py|
 |7|Create a caller ID group with the obtained phoneIDs. After executing you can get the `groupid` <br> Ex: {'message': '315'}|[+Info](/doc/calleridgroups.md)<br>[Edit](src/caller-id-groups/post-caller-id-group.py)|python src/caller-id-groups/post-caller-id-group.py|
 |8|Import a recording and get the `recID` of the response {message: '100'}|[+Info](/doc/recordings.md)<br>[Edit](/src/recordings/post-systemrecording.py)|python src/recordings/post-systemrecording.py|
@@ -107,4 +107,88 @@ To start to dial you must following some steps:
 |Update a user|`PUT/user/2012`|`python src/users/put-user-id.py`|
 |Delete a user | `DELETE/user/2012` | `python src/users/delete-user-id.py` |
 
+# Testing Example
+*Step 1*. ok, I created the .env file and put the token inside.
+
+*Step 2*. Create a users<br>
+```c
+    python src/users/post-user.py
+```
+```json
+    {, 'message': '15315',} --> userid = 15315
+    {, 'message': '15313',} --> userid = 15313
+    {, 'message': '15314',} --> userid = 15314
+```
+*Step 3*. Collect a users data
+```c
+    python src/users/get-users-id.py
+```
+```c
+    15315   agent_code=u282xdaw7ahwzfz5gsht    agentid=15337
+    15313   agent_code=u282ms5xpeg5m696zckb    agentid=15338 
+    15314   agent_code=u2822htb7mp0d8rnehrd    agentid=15339
+```
+*Step4*. Create a team
+```c
+    python src/teams/post-team.py
+```
+```c
+    queue_id = 10211
+```
+*Step 5*. Collect a team data
+```c
+    python src/teams/get-teams-id.py
+```
+```c
+    name = q282ubzotmgr12bss9zb
+```
+*Step 6*. Create phones
+```c
+    python src/phones/post-phone.py
+```
+```c
+    phoneid = 18003
+```
+*Step 7*. Create CallerIDGroup
+```c
+    python src/caller-id-groups/post-caller-id-group.py
+```
+```c
+    groupid = 316
+```
+*Step 8*. Import a recording
+```c
+   python src/recordings/post-systemrecording.py 
+```
+```c
+    recID = 37
+```
+*Step 9*. Create a campaign 
+```c
+    python src/campaigns/post-campaign.py
+```
+```c
+    camp_id = 1800
+```
+*Step 10*. Upload a file to import
+```c
+    python src/pools/post-pool.py
+```
+```c
+    poolid = 2621
+```
+*Step 11*. Import file uploaded
+```c
+    python src/pools/post-file-import-id.py
+```
+```c
+    {'dedup': 0, 'elegibles': 0, 'error': 0, 'merge': 1499, 'scrub': 0, 'upload': 1499}
+```
+*Step 12*. Start file
+```c
+    python src/pools/post-start-pool-id.py
+```
+```c
+    {'action': 'start_pool', 'data': {}, 'id': '', 'message': '', 'result': 'OK'}
+```
 

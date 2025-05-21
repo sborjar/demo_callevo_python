@@ -12,9 +12,9 @@ load_dotenv()
 url = f'{os.getenv("API_PATH")}systemrecording'
 
 headers = { 'Authorization': f'Bearer {os.getenv("APP_TOKEN")}' }
-params = { "recName": "Example Uno" }
+params = { "recName": "TestNuevo" }
 
-file_name = "testsantiago.wav"
+file_name = "test.wav"
 file_path = f'{sys.path[0]}/files/{file_name}'
 
 def uploadFile():

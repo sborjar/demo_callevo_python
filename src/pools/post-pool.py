@@ -14,7 +14,7 @@ url = f'{os.getenv("API_PATH")}pool'
 headers = { 'Authorization': f'Bearer {os.getenv("APP_TOKEN")}' }
 params = { "recName": "Example Uno" }
 
-file_name = "import_pool.csv"
+file_name = "import_pool2.csv"
 file_path = f'{sys.path[0]}/files/{file_name}'
 
 params = {

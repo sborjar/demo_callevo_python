@@ -3,9 +3,11 @@ import os
 from requests_toolbelt import MultipartEncoder
 
 def getFileNameMethod(file=""):
-    only_name = file.split(".")[0]
+    step1 = file.split("/")
+    step2 = step1[len(step1)-1]
+    only_name = step2.split(".")[0]
     method_file_name = only_name.split("-")[0].upper()
-    return {"current_file_name":only_name, "current_file_method":method_file_name}
+    return only_name,method_file_name
 
 def saveMdFiles(file='', method='', url='', headers={}, params={}, response={}):
     folder = "./results"

@@ -7,7 +7,7 @@ current_file_name, current_file_method = getFileNameMethod(__file__)
 from dotenv import load_dotenv
 load_dotenv()
 
-url = f'{os.getenv("API_PATH")}file_import/2620'
+url = f'{os.getenv("API_PATH")}file_import/2621'
 
 headers = {
     'Content-Type': 'application/json',
