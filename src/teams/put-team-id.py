@@ -14,7 +14,7 @@ headers = {
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params =  {
-    "queueid": 10192,
+    "queueid": 10191,
     "record": { 
         "name": "Tranzas Modificado",
         "team_name": "Tranzas Modificado",

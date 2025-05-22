@@ -14,8 +14,8 @@ headers = {
     'Authorization': f'Bearer {os.getenv("APP_TOKEN")}',
 }
 params = {
-    "fullname": "Agente3",
-    "email": "agente3@demo.com",
+    "fullname": "Agente4",
+    "email": "agente4@demo.com",
     "usertype": 27,
     "language": "en",
 }
