@@ -20,3 +20,9 @@
 }
 ```
 When the operation is new, the `recID` can be 0 or deleted.
+### Required header
+```json
+{
+    "Content-Type": "multipart/form-data",
+}
+```

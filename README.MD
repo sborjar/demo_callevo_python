@@ -1,6 +1,6 @@
 # CallEvo Api RestFul Demo
 
-Developer Tools
+Tools used in development
 
 ![](https://img.shields.io/badge/Python-3.12-blue) 
 
@@ -17,6 +17,14 @@ pyhton -m venv venv
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+### Option 3. Use with docker
+1. Clone repository
+1. Install and open docker (docker desktop)
+1. Open VSCode and install "Dev Container" extension.
+1. Open the floder cloned in a VSCode.
+1. When ask you select "Reopen a Container"
+1. the first time you need to run the installation `pip install --upgrade pip` and `pip install -r requirements.txt`
 
 # Api Documentation
 ### How to use this guide
