@@ -1,29 +1,33 @@
 import requests
-from dotenv import load_dotenv
+import sys
+import os
+sys.path.insert(0, os.getcwd())
 from utils.functions import saveMdFiles,getFileNameMethod
 current_file_name, current_file_method = getFileNameMethod(__file__)
-import os
-
+from dotenv import load_dotenv
 load_dotenv()
 
-url = f'{os.getenv("API_PATH")}public/health'
-
-headers = {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, DELETE',
-    'Access-Control-Allow-Headers': 'Accept,Accept-Language,Content-Language,Content-Type',
-    'Access-Control-Expose-Headers': 'Content-Length,Content-Range',
-}
-
-response = requests.get(url,None,headers=headers)
-
-if response.status_code == 200:
-    print('Successful request')
-    print('Data:', response.json())
-    saveMdFiles(current_file_name,current_file_method,url,headers,None,response.json())
+# Validations
+if os.getenv("API_PATH") == None:
+    print("Fatal!!!: No .env file exists. See README.md for information on how to create an environment file.")
 else:
-    print('Error in the request, details:', response.text)
-    print('Details:')
-    print('Status Code:', response.status_code)
-    print(response)
+    url = f'{os.getenv("API_PATH")}public/health'
+    headers = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, DELETE',
+        'Access-Control-Allow-Headers': 'Accept,Accept-Language,Content-Language,Content-Type',
+        'Access-Control-Expose-Headers': 'Content-Length,Content-Range',
+    }
+
+    response = requests.get(url,None,headers=headers)
+
+    if response.status_code == 200:
+        print('Successful request')
+        print('Data:', response.json())
+        saveMdFiles(current_file_name,current_file_method,url,headers,None,response.json())
+    else:
+        print('Error in the request, details:', response.text)
+        print('Details:')
+        print('Status Code:', response.status_code)
+        print(response)

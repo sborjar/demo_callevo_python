@@ -1,6 +1,6 @@
 # Campaigns
 
-[Back](../README.MD#menu)
+[Back](../README.md#menu)
 
 
 | Description | Route | Command

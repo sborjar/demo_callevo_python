@@ -3,7 +3,7 @@ import sys
 import os
 
 from requests_toolbelt import MultipartEncoder
-sys.path.insert(0, f'/workspaces/democallevo/')
+sys.path.insert(0, os.getcwd())
 from utils.functions import saveMdFiles,getFileNameMethod
 current_file_name, current_file_method = getFileNameMethod(__file__)
 from dotenv import load_dotenv

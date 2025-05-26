@@ -1,9 +1,10 @@
 import requests
-from dotenv import load_dotenv
+import sys
+import os
+sys.path.insert(0, os.getcwd())
 from utils.functions import saveMdFiles,getFileNameMethod
 current_file_name, current_file_method = getFileNameMethod(__file__)
-import os
-
+from dotenv import load_dotenv
 load_dotenv()
 
 url = f'{os.getenv("API_PATH")}appversion?app=agent'

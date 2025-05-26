@@ -1,5 +1,5 @@
 # Phones
-[Back](../README.MD#menu)
+[Back](../README.md#menu)
 
 Numbers or phones numbers.
 
