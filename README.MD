@@ -33,7 +33,7 @@ First you must open the Api documentation. [`http://616262.ip.hamvoip.org:8082/d
 
 In the documentation it indicates how the path is defined and the requirements it has.
 
-For this demo each path can be found in the `./src/` folder and is subdivided in groups, and they are the same as in the documentation. Ex: If the route says GET/appversion inside General Routes then the corresponding demo file is in `./src/general/get-appversion.py` or `./src/general/public/get-node_list`.
+For this demo each path can be found in the `.src/` folder and is subdivided in groups, and they are the same as in the documentation. Ex: If the route says GET/appversion inside General Routes then the corresponding demo file is in `.src/general/get-appversion.py` or `.src/general/public/get-node_list`.
 
 ![image](./images/api-doc.jpg)
 
@@ -49,26 +49,27 @@ APP_TOKEN=<token>
 2. Each file has a working code example that works without problems. 
 3. When the file is run, the result is saved in the `results` folder.
 
-# Execute Demo
-
-1. You must to select a route and group: Ex: `General/GET/appversion`
-2. Run
+# Check if the api is healthy and all works well
 ```
-python /src/general/get-appversion.py
-```
-3. Response
-```js
-Successful request
-Response: {'action': 'appversion', 'data': {'appversion': 'v1.250'}, 'id': '', 'message': '', 'result': 'OK'}
-```
-# Check if the api is healthy
-```
-python /src/general/get-health.py 
+python src/general/get-health.py 
 ```
 Result
 ```js
 Successful request
 Data: {'action': 'checkhealth', 'id': '', 'message': 'Healthy', 'result': 'OK'}
+```
+
+# Execute Demo
+
+1. You must to select a route and group: Ex: `General/GET/appversion`
+2. Run
+```
+python src/general/get-appversion.py
+```
+3. Response
+```js
+Successful request
+Response: {'action': 'appversion', 'data': {'appversion': 'v1.250'}, 'id': '', 'message': '', 'result': 'OK'}
 ```
 
 # What routes should I follow to be able to dial 
@@ -77,17 +78,17 @@ To start to dial you must following some steps:
 |Step|Description|Actions|Command to run|
 |---|---|---|---|
 |1|Callevo Administration gives you a token which you must paste into an environment variable file in the .env file. | [+Info](/doc/create_environment_file.md) ||
-|2|Create a users (agents/clickers) and obtain the `userid` <br>Ex: {..."message": 12} from response|[+Info](/doc/users.md)<br>[Edit](/src/users/post-user.py)|python src/users/post-user.py|
+|2|Create a users (agents/clickers) and obtain the `userid` <br>Ex: {..."message": 12} from response|[+Info](/doc/users.md)<br>[Edit](src/users/post-user.py)|python src/users/post-user.py|
 |3|Collect user data by getting the `agent_code` and `agentid` field|[Edit](src/users/get-users-id.py)|python src/users/get-users-id.py|
-|4|Create a team and paste the `agent_code` into the interface field => "Agent/<agent_code>"|[+Info](/doc/teams.md)<br>[Edit](/src/teams/post-team.py)|python src/teams/post-team.py|
-|5|Collect team data by queue_id to get the `name` field, <br> Ex: `{..name: "q282fpqah33qky3s8egq90"}`|[Edit](/src/teams/get-teams-id.py)|python src/teams/get-teams-id.py|
-|6|Create a phone and obtain the `phoneid` from response {message: '1852'}|[+Info](/doc/phones.md)<br>[Edit](/src/phones/post-phone.py)|python src/phones/post-phone.py|
+|4|Create a team and paste the `agent_code` into the interface field => "Agent/<agent_code>"|[+Info](/doc/teams.md)<br>[Edit](src/teams/post-team.py)|python src/teams/post-team.py|
+|5|Collect team data by queue_id to get the `name` field, <br> Ex: `{..name: "q282fpqah33qky3s8egq90"}`|[Edit](src/teams/get-teams-id.py)|python src/teams/get-teams-id.py|
+|6|Create a phone and obtain the `phoneid` from response {message: '1852'}|[+Info](/doc/phones.md)<br>[Edit](src/phones/post-phone.py)|python src/phones/post-phone.py|
 |7|Create a caller ID group with the obtained phoneIDs. After executing you can get the `groupid` <br> Ex: {'message': '315'}|[+Info](/doc/calleridgroups.md)<br>[Edit](src/caller-id-groups/post-caller-id-group.py)|python src/caller-id-groups/post-caller-id-group.py|
-|8|Import a recording and get the `recID` of the response {message: '100'}|[+Info](/doc/recordings.md)<br>[Edit](/src/recordings/post-systemrecording.py)|python src/recordings/post-systemrecording.py|
-|9|Create a campaign and obtain the `camp_id`.<br> Optional: you can complement the campaign information by filling the fields with data obtained in previous routes such as: groupid, name (team name), initialrecordID/finalrecordID with the recID|[+Info](/doc/campaigns.md)<br>[Edit](/src/campaigns/post-campaign.py)|python src/campaigns/post-campaign.py|
-|10|Upload the file containing the numbers to make the calls.<br>You must paste the file in the `files` folder.|[+Info](/doc/pools.md)<br>[Edit](/src/pools/post-pool.py) |python src/pools/post-pool.py|
-|11|Import data from file uploaded.<br>You can see the result with the following information: `{'dedup': 0, 'elegibles': 0, 'error': 0, 'merge': 1499, 'scrub': 0, 'upload': 1499}` |[Edit](/src/pools/post-file-import-id.py)|python src/pools/post-file-import-id.py
-|12|Start file imported|[Edit](/src/pools/post-start-pool-id.py)|python src/pools/post-start-pool-id.py
+|8|Import a recording and get the `recID` of the response {message: '100'}|[+Info](/doc/recordings.md)<br>[Edit](src/recordings/post-systemrecording.py)|python src/recordings/post-systemrecording.py|
+|9|Create a campaign and obtain the `camp_id`.<br> Optional: you can complement the campaign information by filling the fields with data obtained in previous routes such as: groupid, name (team name), initialrecordID/finalrecordID with the recID|[+Info](/doc/campaigns.md)<br>[Edit](src/campaigns/post-campaign.py)|python src/campaigns/post-campaign.py|
+|10|Upload the file containing the numbers to make the calls.<br>You must paste the file in the `files` folder.|[+Info](/doc/pools.md)<br>[Edit](src/pools/post-pool.py) |python src/pools/post-pool.py|
+|11|Import data from file uploaded.<br>You can see the result with the following information: `{'dedup': 0, 'elegibles': 0, 'error': 0, 'merge': 1499, 'scrub': 0, 'upload': 1499}` |[Edit](src/pools/post-file-import-id.py)|python src/pools/post-file-import-id.py
+|12|Start file imported|[Edit](src/pools/post-start-pool-id.py)|python src/pools/post-start-pool-id.py
 |13|Start a campaign
 
 

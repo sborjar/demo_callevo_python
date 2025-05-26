@@ -1,6 +1,6 @@
 # Tenants
 
-[Back](../README.md#menu)
+[Back](../README.MD#menu)
 
 
 | Description | Route | Command

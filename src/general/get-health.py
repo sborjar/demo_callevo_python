@@ -9,7 +9,7 @@ load_dotenv()
 
 # Validations
 if os.getenv("API_PATH") == None:
-    print("Fatal!!!: No .env file exists. See README.md for information on how to create an environment file.")
+    print("Fatal!!!: No .env file exists. See README.MD for information on how to create an environment file.")
 else:
     url = f'{os.getenv("API_PATH")}public/health'
     headers = {
