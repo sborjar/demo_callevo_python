@@ -6,8 +6,12 @@
 *.wav
 
 testing.txt
+testing.md
 log.txt
 
 __pycache__/
 results/
 files/
+
+
+test/
