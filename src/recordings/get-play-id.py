@@ -22,8 +22,12 @@ folder_exists = os.path.exists(folder)
 if folder_exists == False:
     os.mkdir(f"{folder}")  
 
-response = requests.get(url, json=params, headers=headers, stream=True)
-
+try:
+    response = requests.get(url, json=params, headers=headers, stream=True)
+except Exception as error:
+    print(error)
+    sys.exit(1)
+    
 if response.status_code == 200:
     print('Successful request')
     if response.headers["Accept-Ranges"] == "bytes":

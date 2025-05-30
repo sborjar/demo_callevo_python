@@ -16,8 +16,12 @@ headers = {
     'Access-Control-Allow-Headers': 'Accept,Accept-Language,Content-Language,Content-Type',
     'Access-Control-Expose-Headers': 'Content-Length,Content-Range',
 }
-response = requests.get(url)
-
+try:
+    response = requests.get(url)
+except Exception as error:
+    print(error)
+    sys.exit(1)
+    
 if response.status_code == 200:
     print('Successful request')
     print('Response:', response.json())

@@ -19,8 +19,12 @@ params = {
     "email": "santiago@rokas.com"
 }
 
-response = requests.put(url, json=params, headers=headers)
-
+try:
+    response = requests.put(url, json=params, headers=headers)
+except Exception as error:
+    print(error)
+    sys.exit(1)
+    
 if response.status_code == 200:
     print('Successful request')
     print('Data:', response.json())

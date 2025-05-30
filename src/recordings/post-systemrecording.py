@@ -26,7 +26,11 @@ def uploadFile():
         encoder = MultipartEncoder(fields=fields)
         headers['Content-Type'] =  encoder.content_type
         
-        response = requests.post(url, data=encoder, headers=headers)
+        try:
+            response = requests.post(url, data=encoder, headers=headers)
+        except Exception as error:
+            print(error)
+            sys.exit(1)
     return response
 
 if __name__ == "__main__":
