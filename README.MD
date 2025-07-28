@@ -29,7 +29,7 @@ pip install -r requirements.txt
 # Api Documentation
 ### How to use this guide
 
-First you must open the Api documentation. [`http://616262.ip.hamvoip.org:8082/doc/index.html#/`](http://616262.ip.hamvoip.org:8082/doc/index.html#/)
+First you must open the Api documentation. [`https://sandbox.callevo.net/doc/index.html#/`](https://sandbox.callevo.net/doc/index.html#//)
 
 In the documentation it indicates how the path is defined and the requirements it has.
 
@@ -43,7 +43,7 @@ For this demo each path can be found in the `.src/` folder and is subdivided in 
 .env -> Environment Variables
 ```
 ```
-API_PATH=http://616262.ip.hamvoip.org:8082/api/v2/
+API_PATH=https://sandbox.callevo.net/api/v2/
 APP_TOKEN=<token>
 ```
 2. Each file has a working code example that works without problems. 
